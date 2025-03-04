@@ -73,4 +73,4 @@ chmod 700 /home/research_team/drafts
 ## **Summary | 摘要**
 This project involved checking and modifying file permissions using Linux commands. We ensured compliance with the **Principle of Least Privilege**, revoked unnecessary write permissions, and secured sensitive files and directories. Mastering these Linux commands is essential for cybersecurity professionals to maintain system security.
 
-本项目涉及使用 Linux 命令检查和修改文件权限。我们确保遵循 **最小权限原则**，移除不必要的写权限，并安全管理机密文件和目录。熟练掌握这些 Linux 命令对系统安全专业人士至关重要。
+本项目涉及使用 Linux 命令检查和修改文件权限。我们确保遵循 **最小权限原则**，移除不必要的写权限，并安全管理机密文件和目录。
