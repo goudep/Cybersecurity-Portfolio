@@ -1,20 +1,5 @@
 # **Exemplar: Decrypt an Encrypted Message | 示例：解密加密消息**  
 
-## **Activity Overview | 活动概述**  
-Previously, you learned about cryptography and how encryption and decryption can be used to secure information online.  
-你之前学习了密码学，以及如何使用加密和解密来保护在线信息。  
-
-You were also introduced to the Caesar cipher, one of the earliest cryptographic algorithms used to protect people’s privacy.  
-你还学习了凯撒密码（Caesar cipher），这是最早用于保护隐私的加密算法之一。  
-
-As a security analyst, it’s important that you understand the role of encryption to secure data online and that you’re familiar with the right security controls to do so.  
-作为安全分析师，理解加密在保护在线数据中的作用，并熟悉正确的安全控制措施至关重要。  
-
-In this lab activity, you’ll be guided through some basic cryptographic activities using Linux commands to decrypt files and reveal hidden messages.  
-在本实验活动中，你将使用 Linux 命令进行一些基本的密码学操作，以解密文件并揭示隐藏的信息。  
-
----  
-
 ## **Scenario | 场景**  
 In this scenario, all of the files in your home directory have been encrypted. You’ll need to use Linux commands to break the Caesar cipher and decrypt the files so that you can read the hidden messages they contain.  
 在此场景中，你的 home 目录中的所有文件都已加密。你需要使用 Linux 命令破解凯撒密码并解密文件，以读取其中包含的隐藏消息。  
