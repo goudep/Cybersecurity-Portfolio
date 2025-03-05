@@ -1,63 +1,83 @@
-# **银行风险评估与风险登记表**  
-## **Bank Risk Assessment & Risk Register**  
+# **Data Leak Analysis Report | 数据泄露分析报告**
 
 ---
 
-## **1️⃣ 风险环境分析 | Operational Environment Analysis**  
-该银行位于**沿海低犯罪率地区**，其业务环境特点包括：  
-- **员工规模**：100 名本地员工 + 20 名远程员工  
-- **客户群体**：2,000 名个人账户 + 200 家商业账户  
-- **市场推广**：合作方包括**职业体育团队**和**十家本地企业**  
-- **合规要求**：需符合**严格的金融监管规定**，确保资金安全并满足**美联储现金储备要求**  
+## **1️⃣ Incident Summary | 事件概述**
+### **Issue(s) | 问题描述**  
+The primary cause of this data leak was **the failure to enforce the Principle of Least Privilege (PoLP)**. The contributing factors include:  
+- **Improper access management**: The sales manager shared an internal document folder with the entire team during a meeting but did not revoke access afterward.  
+- **Lack of security awareness**: A sales representative mistakenly shared the entire folder link instead of only the marketing materials during a video call.  
+- **External partner mismanagement**: The business partner failed to recognize the document’s sensitivity and mistakenly posted the link on social media.  
 
-银行资产的主要风险来源包括**人为攻击（网络钓鱼、数据泄露）**、**系统漏洞（加密不足、数据库错误配置）**以及**环境因素（自然灾害导致供应链中断）**。  
-
----
-
-## **2️⃣ 风险登记表 | Risk Register**  
-
-| **资产 (Asset)** | **风险 (Risk)** | **描述 (Description)** | **可能性 (Likelihood)** | **严重性 (Severity)** | **优先级 (Priority)** |
-|-----------------|----------------|------------------------|-----------------|-----------------|----------------|
-| **资金 (Funds)** | **商业邮件欺诈 (Business Email Compromise)** | 员工被欺骗泄露机密信息 | **3（高）** | **3（高）** | **9（最高优先级）** |
-| **客户数据库 (User Database)** | **数据库被入侵 (Compromised User Database)** | 客户数据加密不足，可能被窃取 | **2（中）** | **3（高）** | **6（高优先级）** |
-| **财务记录 (Financial Records)** | **财务数据泄露 (Financial Records Leak)** | 备份数据库未正确配置，可能公开访问 | **2（中）** | **3（高）** | **6（高优先级）** |
-| **银行现金储备 (Bank Funds)** | **盗窃 (Theft)** | 银行保险柜未锁定，可能导致资金损失 | **1（低）** | **3（高）** | **3（中优先级）** |
-| **银行供应链 (Supply Chain)** | **供应链中断 (Supply Chain Disruption)** | 自然灾害可能导致资金配送延误 | **1（低）** | **2（中）** | **2（低优先级）** |
+数据泄露事件的主要原因是**未正确执行最小权限原则（PoLP）**，具体因素包括：
+- **访问权限管理不当**：销售经理在会议期间向整个团队共享了一个内部文件夹，而未在会议后撤销访问权限。  
+- **员工缺乏安全意识**：销售代表在视频会议中无意间共享了**整个文件夹的访问链接**，而非单个营销材料文件。  
+- **外部合作方误操作**：业务合作伙伴**未识别文档敏感性**，错误地将该链接发布到社交媒体。  
 
 ---
 
-## **3️⃣ 风险评估分析 | Risk Analysis**  
+## **2️⃣ Review of NIST SP 800-53: AC-6 | NIST SP 800-53: AC-6 概述**
+NIST SP 800-53: AC-6 focuses on **Least Privilege Control**, ensuring that users only have access to the minimum required permissions for their tasks.  
+### **Key Control Points | 核心控制点**  
+- Users should only be granted **the minimum access necessary** to complete their tasks.  
+- **Access levels** should be managed through user roles and permission settings.  
 
-### **🔹 可能性评分（Likelihood Score）**  
-- **商业邮件欺诈 (3)**：网络钓鱼攻击极为常见，尤其是针对银行员工的定向攻击。  
-- **客户数据库被入侵 (2)**：加密措施可能不足，但较强的访问控制可降低风险。  
-- **财务记录泄露 (2)**：数据库配置错误不常见，但一旦发生，影响极大。  
-- **银行盗窃 (1)**：物理安全措施较强，发生概率低。  
-- **供应链中断 (1)**：自然灾害风险较低，但仍可能影响现金流通。  
+NIST SP 800-53: AC-6 主要关注**最小权限控制（Least Privilege）**，确保用户只能访问其工作所需的最小权限：
+- 用户只能获得**完成工作所需的最小权限**。  
+- 通过账户角色、权限管理机制来**限制访问级别**。  
 
-### **🔹 严重性评分（Severity Score）**  
-- **商业邮件欺诈 (3)**：可能导致账户资金被盗，影响极大。  
-- **客户数据库被入侵 (3)**：数据泄露可能导致法律责任和客户流失。  
-- **财务记录泄露 (3)**：泄露可能导致监管罚款和客户信任危机。  
-- **银行盗窃 (3)**：资金直接损失，影响严重。  
-- **供应链中断 (2)**：影响银行现金流，但不会直接导致资金损失。  
+### **Control Enhancements | 增强措施**
+- **Restrict access to sensitive resources based on user role.**  
+- **Automatically revoke access after a certain period.**  
+- **Log and monitor user privilege activities.**  
+- **Regularly audit user access privileges.**  
 
-### **🔹 风险优先级计算（Priority Calculation）**  
-- **公式：可能性 (Likelihood) × 严重性 (Severity) = 风险优先级 (Risk Priority)**  
-- **最高优先级（9）：商业邮件欺诈**（需立即解决）  
-- **高优先级（6）：客户数据库被入侵、财务记录泄露**（需要重点关注）  
-- **中优先级（3）：银行盗窃**（需定期审查安全措施）  
-- **低优先级（2）：供应链中断**（需要应急计划）  
+**增强措施**
+- **根据用户角色限制对敏感资源的访问。**  
+- **自动撤销过期的访问权限。**  
+- **记录并监控用户权限活动。**  
+- **定期审查用户权限。**  
 
 ---
 
-## **4️⃣ 关键结论 | Key Takeaways**  
+## **3️⃣ Recommendations | 改进建议**
+To prevent similar data leaks in the future, the company should implement the following **two key control measures**:
 
-✅ **商业邮件欺诈是最高优先级风险**，需加强员工培训和邮件过滤系统。  
-✅ **客户数据库和财务数据泄露风险较高**，应实施更严格的加密和访问控制措施。  
-✅ **银行盗窃风险较低，但物理安全仍需严格管理**。  
-✅ **供应链中断虽然影响较小，但应建立备用资金应对紧急情况**。  
+1️⃣ **Automatically revoke expired access permissions | 自动撤销过期访问权限**  
+   - After meetings, **system-enforced access revocation** should be implemented to prevent accidental sharing.  
+   - Set **time-limited access permissions**, requiring employees to reapply for access when necessary.  
 
-📌 **建议：加强网络安全培训、改进数据加密、强化银行物理安全措施，以降低整体风险。**  
+2️⃣ **Regularly audit user privileges | 定期审计用户权限**  
+   - Establish **a scheduled privilege review** process to ensure that employees only retain the necessary permissions.  
+   - Utilize **audit logs** to detect abnormal privilege usage and revoke unnecessary access.  
 
-🚀 **通过此风险评估，银行安全团队可以优先解决最紧迫的威胁，确保资金和客户数据安全！**
+为避免类似数据泄露事件的发生，公司应实施以下**两项关键控制措施**：
+
+1️⃣ **自动撤销过期访问权限（Automatically revoke access after a period of time）**  
+   - 会议结束后，系统应**自动收回**不必要的文件访问权限，防止错误共享。  
+   - 访问权限应设定**有效期**，员工需重新申请访问权限，以确保权限合理性。  
+
+2️⃣ **定期审计用户权限（Regularly audit user privileges）**  
+   - 建立**定期权限审计**机制，确保用户只保留必要权限。  
+   - 结合日志分析，发现异常权限使用情况，并及时调整。  
+
+---
+
+## **4️⃣ Justification | 改进措施的必要性**
+✅ **Automatic revocation of access permissions** ensures that access is not left open indefinitely, **reducing human errors** that may lead to data leaks.  
+✅ **Regular privilege audits** help prevent **privilege creep**, ensuring that only authorized personnel have access to sensitive data.  
+✅ These measures **minimize internal security risks**, enhance **data protection**, and align with **NIST SP 800-53 security standards**.  
+
+✅ **自动撤销访问权限**可以**减少人为错误导致的泄露**，确保访问权限不会长期开放给不相关用户。  
+✅ **定期审计用户权限**能够**预防权限累积（Privilege Creep）**，确保仅授权必要人员访问敏感数据。  
+✅ 这些措施可以**有效降低内部操作失误导致的安全风险**，增强公司数据保护机制，符合 **NIST SP 800-53 标准**。  
+
+---
+
+## **📌 Final Recommendation | 最终建议**
+The company should **immediately implement an automated access revocation mechanism** and **strengthen periodic audit processes** to ensure that all employees follow the **Principle of Least Privilege (PoLP)** when handling sensitive data.  
+
+公司应立即**部署权限自动回收机制**，并加强**定期审计流程**，确保所有员工按照**最小权限原则（PoLP）**访问数据，从根本上减少数据泄露风险。  
+
+🚀 **By adopting these measures, the company can better protect customer data, enhance compliance, and significantly reduce the risk of future data leaks!**  
+🚀 **通过这些措施，公司可以更有效地保护客户数据，增强合规性，同时降低潜在的数据泄露风险！**
