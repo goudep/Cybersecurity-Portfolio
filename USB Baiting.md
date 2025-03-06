@@ -1,7 +1,8 @@
 # **Parking Lot USB Exercise Report | 停车场 USB 设备安全分析报告**
 
 ## **Contents | USB 设备内容**
-![这是图片]("C:\Users\yudim\Downloads\USB_Baiting.png")
+![这是图片]("C:\Users\yudim\Downloads\USB_Baiting.jpg" "USB_Baiting")
+
 The USB drive contains a mix of **personal and work-related files**, including **family and pet photos, a new hire letter, an employee shift schedule, and budget documents**. Some of these documents may contain **personally identifiable information (PII)**, such as employee names, contact details, and financial data. Storing personal and work files together on a USB drive is a **security risk**, as it increases the likelihood of unauthorized access and data leakage.
 
 USB 设备包含**个人和工作相关的文件**，例如**家庭和宠物照片、新员工录用信、员工班次安排表和预算文件**。其中一些文件可能包含**个人身份信息（PII）**，如员工姓名、联系方式和财务数据。将个人和工作文件存储在同一 USB 设备中是**安全风险**，因为这增加了**未经授权访问和数据泄露**的可能性。
