@@ -7,7 +7,7 @@ You are a Level 1 SOC (Security Operations Center) analyst at a financial servic
 你是某金融服务公司的一级安全运营中心（SOC）分析员。你收到了一条关于某员工计算机下载可疑文件的警报。  
 
 ### **Incident Timeline | 事件时间线**  
-| **Time | 时间**  | **Event | 事件**  |  
+| **Time 时间**  | **Event 事件**  |  
 |----------|-----------|  
 | 1:11 p.m. | Employee receives an email with a file attachment. | 员工收到带有文件附件的电子邮件。 |  
 | 1:13 p.m. | Employee downloads and opens the file. | 员工下载并打开文件。 |  
