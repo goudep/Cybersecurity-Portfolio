@@ -20,21 +20,21 @@ A small U.S. health care clinic specializing in primary-care services experience
 
 ## **2. Incident Timeline | 事件时间线**
 
-| **Time (EST) | 时间（东部标准时间）** | **Event | 事件** |
+| **Time (EST) 时间（东部标准时间）** | **Event 事件** |
 |--------------|------------|
-| 09:00 AM | Employees reported being unable to access files. | 员工报告无法访问文件。 |
-| 09:10 AM | Ransom note appeared on multiple systems. | 多台计算机显示勒索信息。 |
-| 09:30 AM | IT team identified a ransomware attack. | IT 团队确认是勒索软件攻击。 |
-| 10:00 AM | Investigation determined phishing emails were the initial attack vector. | 调查发现攻击者通过网络钓鱼邮件入侵。 |
-| 10:30 AM | Systems were shut down to contain the attack. | 关闭系统以遏制攻击蔓延。 |
-| 11:00 AM | Incident was reported to cybersecurity experts and law enforcement. | 事件报告给网络安全专家和执法机构。 |
-| 12:00 PM | Initial forensic analysis started. | 开始初步取证分析。 |
+| 09:00 AM | Employees reported being unable to access files.  员工报告无法访问文件。 |
+| 09:10 AM | Ransom note appeared on multiple systems. 多台计算机显示勒索信息。 |
+| 09:30 AM | IT team identified a ransomware attack. IT 团队确认是勒索软件攻击。 |
+| 10:00 AM | Investigation determined phishing emails were the initial attack vector. 调查发现攻击者通过网络钓鱼邮件入侵。 |
+| 10:30 AM | Systems were shut down to contain the attack.  关闭系统以遏制攻击蔓延。 |
+| 11:00 AM | Incident was reported to cybersecurity experts and law enforcement.  事件报告给网络安全专家和执法机构。 |
+| 12:00 PM | Initial forensic analysis started.  开始初步取证分析。 |
 
 ---
 
 ## **3. Root Cause Analysis | 根本原因分析**
 
-**Attack Vector | 攻击向量**: **Phishing Email | 网络钓鱼邮件**
+**Attack Vector 攻击向量**: **Phishing Email  网络钓鱼邮件**
 
 The attackers used **targeted phishing emails** containing a malicious attachment. When employees downloaded the attachment, **malware was installed**, granting attackers access to the network. The attackers then deployed **ransomware**, encrypting critical files and disrupting operations.
 
