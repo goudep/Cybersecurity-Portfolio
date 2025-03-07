@@ -146,5 +146,5 @@ sudo tcpdump -i eth0 'tcp and (dst port 22 or dst port 80 or dst port 443)'
 ✅ **结合 `-X` 选项，可分析数据包的 HEX 和 ASCII 内容。**  
 ✅ **在实际场景中，tcpdump 可用于检测端口扫描、DDoS、C2 通信等异常行为。**  
 
-🚀 **掌握 tcpdump，有助于提升你的安全分析能力，防范网络攻击！**
+
 
