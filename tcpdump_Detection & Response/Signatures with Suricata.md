@@ -76,8 +76,8 @@ As a security analyst, your task is to monitor traffic on your employer's networ
    ```
    **What to look for? 关注信息**
    - **Timestamp  时间戳**: `11/23/2022-12:38:34.624866`
-   - **Signature ID **: `[1:12345:3]`
-   - **Message **: `GET on wire`
+   - **Signature ID** : `[1:12345:3]`
+   - **Message** : `GET on wire`
    - **Source & Destination 源和目标 IP**: `172.21.224.2 -> 142.250.1.139`
 
 #### **3.2 Analyze eve.json 分析 eve.json**
@@ -116,5 +116,5 @@ As a security analyst, your task is to monitor traffic on your employer's networ
 ✅ **fast.log provides quick insights, while eve.json enables deep forensic analysis.**
 ✅ **Using Suricata effectively helps security teams monitor, analyze, and respond to network threats.**
 
-🚀 **Mastering Suricata will enhance your cybersecurity skills and help you detect and mitigate threats more efficiently!**
+🚀 **Mastering Suricata will enhance cybersecurity skills and help detect and mitigate threats more efficiently!**
 
