@@ -1,4 +1,5 @@
-# **Security Incident Analysis Report**  
+# **Security Incident Analysis Report**
+# **Investigate a suspicious file hash**
 ## **安全事件分析报告**  
 
 ## **1. Scenario Overview | 场景概述**  
@@ -9,10 +10,10 @@ You are a Level 1 SOC (Security Operations Center) analyst at a financial servic
 ### **Incident Timeline | 事件时间线**  
 | **Time 时间**  | **Event 事件**  |  
 |----------|-----------|  
-| 1:11 p.m. | Employee receives an email with a file attachment. | 员工收到带有文件附件的电子邮件。 |  
-| 1:13 p.m. | Employee downloads and opens the file. | 员工下载并打开文件。 |  
-| 1:15 p.m. | Malicious executable files are created on the employee's computer. | 多个未经授权的可执行文件在员工计算机上被创建。 |  
-| 1:20 p.m. | IDS detects the malicious activity and sends an alert to SOC. | 入侵检测系统（IDS）检测到恶意活动并向 SOC 发送警报。 |  
+| 1:11 p.m. | Employee receives an email with a file attachment. 员工收到带有文件附件的电子邮件。 |  
+| 1:13 p.m. | Employee downloads and opens the file.  员工下载并打开文件。 |  
+| 1:15 p.m. | Malicious executable files are created on the employee's computer.  多个未经授权的可执行文件在员工计算机上被创建。 |  
+| 1:20 p.m. | IDS detects the malicious activity and sends an alert to SOC.  入侵检测系统（IDS）检测到恶意活动并向 SOC 发送警报。 |  
 
 ---
 
