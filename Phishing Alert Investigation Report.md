@@ -12,14 +12,14 @@ As a Level-1 SOC analyst at a financial services company, you received a phishin
 
 | **Ticket ID** | **A-2703** |
 |-------------|------------|
-| **Alert Message | 警报信息** | Phishing attempt - possible malware download | 网络钓鱼尝试 - 可能下载了恶意软件 |
-| **Severity | 严重性** | Medium | 中等 |
-| **Status | 状态** | Investigating | 调查中 |
-| **Known Malicious File Hash | 已知恶意文件哈希** | `54e6ea47eb04634d3e87fd7787e2136ccfbcc80ade34f246a12cf93bab527f6b` |
-| **Sender Details | 发送者信息** | Def Communications `<76tguyhh6tgftrt7tg.su>` (`114.114.114.114`) |
-| **Receiver Details | 接收者信息** | HR at Inergy `<hr@inergy.com>` (`176.157.125.93`) |
-| **Email Subject | 邮件主题** | Re: Infrastructure Engineer role |
-| **Email Attachment | 邮件附件** | `bfsvc.exe` (Password-protected: `paradise10789`) |
+| **Alert Message 警报信息** | Phishing attempt - possible malware download  网络钓鱼尝试 - 可能下载了恶意软件 |
+| **Severity  严重性** | Medium  中等 |
+| **Status  状态** | Investigating  调查中 |
+| **Known Malicious File Hash  已知恶意文件哈希** | `54e6ea47eb04634d3e87fd7787e2136ccfbcc80ade34f246a12cf93bab527f6b` |
+| **Sender Details  发送者信息** | Def Communications `<76tguyhh6tgftrt7tg.su>` (`114.114.114.114`) |
+| **Receiver Details  接收者信息** | HR at Inergy `<hr@inergy.com>` (`176.157.125.93`) |
+| **Email Subject  邮件主题** | Re: Infrastructure Engineer role |
+| **Email Attachment  邮件附件** | `bfsvc.exe` (Password-protected: `paradise10789`) |
 
 ---
 
@@ -27,10 +27,10 @@ As a Level-1 SOC analyst at a financial services company, you received a phishin
 
 | **Time 时间** | **Event 事件** |
 |----------|-----------|
-| **1:11 PM** | Employee received a phishing email with an attachment. | 员工收到带有附件的网络钓鱼邮件。 |
-| **1:13 PM** | Employee downloaded and opened the attachment. | 员工下载并打开了附件。 |
-| **1:15 PM** | Unauthorized executable files were created on the system. | 未经授权的可执行文件在系统中被创建。 |
-| **1:20 PM** | IDS detected the malicious activity and sent an alert. | 入侵检测系统（IDS）检测到恶意活动并发送警报。 |
+| **1:11 PM** | Employee received a phishing email with an attachment.  员工收到带有附件的网络钓鱼邮件。 |
+| **1:13 PM** | Employee downloaded and opened the attachment.  员工下载并打开了附件。 |
+| **1:15 PM** | Unauthorized executable files were created on the system.  未经授权的可执行文件在系统中被创建。 |
+| **1:20 PM** | IDS detected the malicious activity and sent an alert.  入侵检测系统（IDS）检测到恶意活动并发送警报。 |
 
 ---
 
@@ -54,11 +54,11 @@ From the VirusTotal analysis, the following **Indicators of Compromise (IoCs)** 
 
 | **IoC Type 类型**  | **Details 详细信息** |
 |------------|------------|
-| **Hash Value | 哈希值** | `54e6ea47eb04634d3e87fd7787e2136ccfbcc80ade34f246a12cf93bab527f6b` |
-| **IP Address | IP 地址** | `185.220.101.42` (Malicious) |
-| **Domain Name | 域名** | `hxxp://malware-distribution.com` (Flagged as phishing/malware site) |
-| **Host Artifact | 主机工件** | Created file: `C:\Users\Public\svchost.exe` |
-| **Tactics, Techniques, and Procedures (TTPs) | 攻击策略、技术与程序** | MITRE ATT&CK TTPs: Phishing (T1566), Execution via Scripting (T1059) |
+| **Hash Value  哈希值** | `54e6ea47eb04634d3e87fd7787e2136ccfbcc80ade34f246a12cf93bab527f6b` |
+| **IP Address  IP 地址** | `185.220.101.42` (Malicious) |
+| **Domain Name  域名** | `hxxp://malware-distribution.com` (Flagged as phishing/malware site) |
+| **Host Artifact  主机工件** | Created file: `C:\Users\Public\svchost.exe` |
+| **Tactics, Techniques, and Procedures (TTPs) 攻击策略、技术与程序** | MITRE ATT&CK TTPs: Phishing (T1566), Execution via Scripting (T1059) |
 
 ---
 
@@ -88,7 +88,7 @@ From the VirusTotal analysis, the following **Indicators of Compromise (IoCs)** 
 
 | **Ticket Status 工单状态** | **Escalated 已升级** |
 |-----------------|-----------------|
-| **Ticket Comments | 工单备注** | A phishing email containing a malicious attachment was detected and verified. VirusTotal analysis confirmed the file as malware, with associated IoCs including malicious IP, domain, and host artifacts. The alert has been escalated to Level-2 SOC analysts for further investigation. | 发现并确认了一封带有恶意附件的网络钓鱼邮件。VirusTotal 分析确认该文件为恶意软件，相关 IoCs 包括恶意 IP、域名及主机工件。已将警报升级至二级 SOC 分析师进行进一步调查。 |
+| **Ticket Comments  工单备注** | A phishing email containing a malicious attachment was detected and verified. VirusTotal analysis confirmed the file as malware, with associated IoCs including malicious IP, domain, and host artifacts. The alert has been escalated to Level-2 SOC analysts for further investigation.  发现并确认了一封带有恶意附件的网络钓鱼邮件。VirusTotal 分析确认该文件为恶意软件，相关 IoCs 包括恶意 IP、域名及主机工件。已将警报升级至二级 SOC 分析师进行进一步调查。 |
 
 ---
 
