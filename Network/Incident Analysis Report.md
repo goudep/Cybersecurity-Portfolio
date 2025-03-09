@@ -1,12 +1,10 @@
 # **Incident Analysis Report | 安全事件分析报告**
 
 ## **1. Incident Summary | 事件摘要**
-### **English**
 A **Distributed Denial of Service (DDoS) attack** targeted the company's **internal network**, disrupting operations for **two hours**. The attack involved a **flood of ICMP packets**, overwhelming the network and making internal resources inaccessible.
 
 The **incident response team** identified that the attack was due to an **unconfigured firewall**, which allowed malicious ICMP traffic into the network. The team responded by blocking incoming **ICMP packets**, shutting down non-essential services, and restoring critical systems.
 
-### **中文**
 公司内部网络遭受 **分布式拒绝服务（DDoS）攻击**，导致 **两个小时的业务中断**。攻击者利用 **ICMP 数据包洪流** 使网络资源过载，导致内部系统无法访问。
 
 **事件响应团队** 发现攻击的主要原因是 **防火墙未正确配置**，允许了恶意 ICMP 流量进入。团队采取措施 **阻止 ICMP 流量**，关闭非关键服务，并恢复核心系统。
