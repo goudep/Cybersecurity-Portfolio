@@ -1,9 +1,11 @@
 # **Incident Analysis Report | 安全事件分析报告**
 
 ## **1. Incident Summary | 事件摘要**
+
 A **Distributed Denial of Service (DDoS) attack** targeted the company's **internal network**, disrupting operations for **two hours**. The attack involved a **flood of ICMP packets**, overwhelming the network and making internal resources inaccessible.
 
 The **incident response team** identified that the attack was due to an **unconfigured firewall**, which allowed malicious ICMP traffic into the network. The team responded by blocking incoming **ICMP packets**, shutting down non-essential services, and restoring critical systems.
+
 
 公司内部网络遭受 **分布式拒绝服务（DDoS）攻击**，导致 **两个小时的业务中断**。攻击者利用 **ICMP 数据包洪流** 使网络资源过载，导致内部系统无法访问。
 
@@ -16,17 +18,11 @@ The **incident response team** identified that the attack was due to an **unconf
 - ✅ **DDoS attack using ICMP flood | 基于 ICMP 洪流的 DDoS 攻击**
 
 ### **Affected Systems & Impact | 受影响的系统及影响**
-- ✅ **Internal network services | 内部网络服务**
-  - ❌ **Impact:** Employees were unable to access internal applications, delaying business operations.
-  - 🔴 **Severity:** High (**业务关键性**)
-  
-- ✅ **Firewall | 防火墙**
-  - ❌ **Impact:** The firewall was bypassed due to misconfigurations, allowing malicious ICMP traffic.
-  - 🟠 **Severity:** Medium (**系统配置缺陷**)
-
-- ✅ **Network monitoring systems | 网络监控系统**
-  - ❌ **Impact:** Lack of real-time alerts for unusual ICMP traffic contributed to a delayed response.
-  - 🟠 **Severity:** Medium (**监控不足**)
+| **System** | **Impact** | **Severity** |
+|------------|-----------|-------------|
+| **Internal network services** | Employees were unable to access internal applications, delaying business operations. | 🔴 High (业务关键性) |
+| **Firewall** | The firewall was bypassed due to misconfigurations, allowing malicious ICMP traffic. | 🟠 Medium (系统配置缺陷) |
+| **Network monitoring systems** | Lack of real-time alerts for unusual ICMP traffic contributed to a delayed response. | 🟠 Medium (监控不足) |
 
 ### **Attack Source | 攻击来源**
 - ✅ **Spoofed IP addresses | 伪造 IP 地址**
@@ -66,22 +62,29 @@ The **incident response team** identified that the attack was due to an **unconf
 ---
 
 ## **5. Respond (响应)**
-### **Incident Response Plan | 事件响应计划**
-#### **Step 1: Detection | 发现**
-- ✅ **Monitor logs and alerts for unusual ICMP traffic**  
-- ✅ **Verify if multiple IPs are targeting the network simultaneously**
+### **Incident Response Procedure | 事件响应程序**
+1. **Detection & Identification | 发现与识别**
+   - ✅ **Monitor logs and alerts for unusual ICMP traffic**  
+   - ✅ **Verify if multiple IPs are targeting the network simultaneously**
 
-#### **Step 2: Containment | 事件遏制**
-- ✅ **Block identified malicious IPs | 阻止已识别的恶意 IP**
-- ✅ **Disable ICMP requests from unknown sources | 禁止未知来源的 ICMP 请求**
+2. **Containment | 事件遏制**
+   - ✅ **Block identified malicious IPs | 阻止已识别的恶意 IP**
+   - ✅ **Disable ICMP requests from unknown sources | 禁止未知来源的 ICMP 请求**
+   - ✅ **Isolate affected network segments | 隔离受影响的网络部分**
 
-#### **Step 3: Neutralization | 中和威胁**
-- ✅ **Fine-tune firewall settings | 优化防火墙配置**
-- ✅ **Deploy automated scripts to detect abnormal traffic | 部署自动化脚本检测异常流量**
+3. **Neutralization & Eradication | 中和与消除**
+   - ✅ **Fine-tune firewall settings | 优化防火墙配置**
+   - ✅ **Deploy automated scripts to detect abnormal traffic | 部署自动化脚本检测异常流量**
+   - ✅ **Implement anti-DDoS measures | 实施抗DDoS措施**
 
-#### **Step 4: Post-Incident Review | 事件分析与改进**
-- ✅ **Review firewall and network logs | 审查防火墙和网络日志**
-- ✅ **Document security incident findings | 记录安全事件分析报告**
+4. **Recovery | 恢复**
+   - ✅ **Gradually restore affected systems | 逐步恢复受影响的系统**
+   - ✅ **Verify system stability before full recovery | 确保系统稳定后再全面恢复**
+
+5. **Post-Incident Review | 事后分析**
+   - ✅ **Review firewall and network logs | 审查防火墙和网络日志**
+   - ✅ **Document security incident findings | 记录安全事件分析报告**
+   - ✅ **Refine security policies and incident response plans | 优化安全策略与事件响应计划**
 
 ---
 
@@ -94,6 +97,7 @@ The **incident response team** identified that the attack was due to an **unconf
 - ✅ **Prevent Future Incidents | 预防未来事件**
   - **Regular firewall audits | 定期防火墙安全审查**
   - **Deploy DDoS mitigation services | 采用 DDoS 缓解方案**
+  - **Simulate cyber-attack scenarios to improve response** | **模拟网络攻击场景以改进响应**
 
 - ✅ **Incident Documentation & Training | 事件文档与培训**
   - **Update security policies and procedures | 更新安全策略与操作规程**
