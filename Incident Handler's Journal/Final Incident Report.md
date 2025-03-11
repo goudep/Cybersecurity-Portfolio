@@ -105,6 +105,17 @@ This ransomware attack severely disrupted healthcare operations, emphasizing the
 ---
 
 📌 **Final Report Prepared By | 报告编写人**: [Your Name]  
+
 📆 **Date | 日期**: [Insert Actual Date]  
 🏢 **Organization | 组织**: [Insert Organization Name]
 
+tags: [
+  "Ransomware",
+  "Phishing",
+  "Cybersecurity Incident",
+  "Healthcare Security",
+  "Incident Response",
+  "Data Breach",
+  "IT Security"
+]
+categories: ["Cybersecurity", "Incident Reports", "Healthcare"]
